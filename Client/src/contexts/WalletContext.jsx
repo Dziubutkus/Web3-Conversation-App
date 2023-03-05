@@ -19,6 +19,8 @@ const magic_address = accounts[0];
 
 export const WalletContext = createContext();
 
+console.log(magic_address);
+
 export const WalletContextProvider = ({ children }) => {
   const [walletAddress, setWalletAddress] = useState(magic_address);
   const [signer, setSigner] = useState(provider.getSigner());
