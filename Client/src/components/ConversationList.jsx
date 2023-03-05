@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { getLatestMessage } from "../utils/utils";
 import ConversationCard from "./ConversationCard";
 
