@@ -15,7 +15,7 @@ const AddressInput = ({
         <>
           <Input
             setNewValue={setNewAddress}
-            placeholder="Enter a wallet address"
+            placeholder="Enter a chat address"
             value={newAddress}
             onInputBlur={() => onInputBlur(newAddress)}
           />
