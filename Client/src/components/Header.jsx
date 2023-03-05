@@ -6,10 +6,8 @@ import { XmtpContext } from "../contexts/XmtpContext";
 import { MdOutlineContentCopy } from 'react-icons/md';
 
 const Header = () => {
-  const { connectWallet, walletAddress, signer } = useContext(WalletContext);
+  const { connectWallet, disconnectWallet, walletAddress, signer } = useContext(WalletContext);
   const [providerState] = useContext(XmtpContext);
-
-  console.log(walletAddress)
 
   return (
     <div className="header flex align-center justify-between">
@@ -21,6 +19,14 @@ const Header = () => {
             navigator.clipboard.writeText(walletAddress)}}>
              <MdOutlineContentCopy />
           </button>
+          {providerState.client && ( 
+            <button 
+              className="btn" 
+              onClick={() => disconnectWallet()} 
+            > 
+              Disconnect
+            </button>
+          )}
           {!providerState.client && (
             <button
               className="btn"
