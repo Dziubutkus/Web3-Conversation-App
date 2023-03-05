@@ -8,7 +8,7 @@ import Web3 from 'web3'
 import { Magic } from 'magic-sdk';
 
 const magic = new Magic('pk_live_745DAF0421FA12A3', {
-  network: "goerli", // Ethereum testnet
+  network: "mumbai", // Ethereum testnet
 });
 
 const provider = new ethers.providers.Web3Provider(magic.rpcProvider);
